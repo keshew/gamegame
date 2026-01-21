@@ -2,7 +2,7 @@ import SwiftUI
 
 struct TabBarView: View {
     @State private var selectedTab: CustomTabBar.TabType = .Menu
-    
+    @ObservedObject  var soundManager = SoundManager.shared
     var body: some View {
         ZStack(alignment: .bottom) {
             VStack {
