@@ -140,6 +140,7 @@ struct TideOfFortuneView: View {
                                     .frame(width: 48, height: 60)
                                     .cornerRadius(20)
                             }
+                            .disabled(viewModel.showResult)
                             
                             Spacer()
                             
@@ -159,6 +160,7 @@ struct TideOfFortuneView: View {
                                     .frame(width: 48, height: 60)
                                     .cornerRadius(20)
                             }
+                            .disabled(viewModel.showResult)
                         }
                     }
                     .frame(width: 264, height: 62)
