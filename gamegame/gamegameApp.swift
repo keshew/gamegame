@@ -1,17 +1,23 @@
-//
-//  gamegameApp.swift
-//  gamegame
-//
-//  Created by Артём Коротков on 18.01.2026.
-//
+
 
 import SwiftUI
 
 @main
 struct gamegameApp: App {
+    
+    init() {
+        let stats = UserDefaultsManager.shared
+        let key = "didAddInitialCoins"
+        if !UserDefaults.standard.bool(forKey: key) {
+            stats.addCoins(5000)
+            UserDefaults.standard.set(true, forKey: "isMusicOn")
+            UserDefaults.standard.set(true, forKey: key)
+        }
+    }
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabBarView()
         }
     }
 }
